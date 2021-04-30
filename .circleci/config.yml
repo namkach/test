@@ -6,3 +6,4 @@ workflows:
     jobs:
       - cypress/run :
           record : true
+          CYPRESS_RECORD_KEY : 8480db50-7215-419a-bf3d-ea79ce325abc
