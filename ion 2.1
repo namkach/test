@@ -1,0 +1,23 @@
+[1mdiff --git a/cypress/integration/examples/main.js b/cypress/integration/examples/main.js[m
+[1mindex 21848d2..2c8667d 100644[m
+[1m--- a/cypress/integration/examples/main.js[m
+[1m+++ b/cypress/integration/examples/main.js[m
+[36m@@ -1,6 +1,14 @@[m
+ describe('test', () => {[m
+[31m-    it('test1', () => { [m
+[31m-        cy.visit('https://www.google.com/')[m
+[31m-        [m
+[32m+[m[32m    var arr = ['qwerty', 'yui', 'asd'][m
+[32m+[m[32m    arr.forEach((text) => {[m
+[32m+[m[32m        it('test ' + text, () => {[m[41m [m
+[32m+[m[32m            Cypress.on('uncaught:exception', (err, runnable) => {[m
+[32m+[m[32m                return false[m
+[32m+[m[32m            })[m
+[32m+[m[41m            [m
+[32m+[m[32m            cy.visit('https://integ1.7online.7eleven.co.th/')[m
+[32m+[m[32m            cy.log('text : ' + text)[m
+[32m+[m[32m        })[m
+     })[m
+[32m+[m[41m    [m
+ })[m
+\ No newline at end of file[m

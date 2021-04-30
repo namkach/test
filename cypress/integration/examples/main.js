@@ -1,6 +1,14 @@
 describe('test', () => {
-    it('test1', () => { 
-        cy.visit('https://www.google.com/')
-        
+    var arr = ['qwerty', 'yui', 'asd']
+    arr.forEach((text) => {
+        it('test ' + text, () => { 
+            Cypress.on('uncaught:exception', (err, runnable) => {
+                return false
+            })
+            
+            cy.visit('https://integ1.7online.7eleven.co.th/')
+            cy.log('text : ' + text)
+        })
     })
+    
 })
