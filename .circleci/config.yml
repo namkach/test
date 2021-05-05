@@ -2,6 +2,10 @@ version: 2.1
 orbs:
   cypress: cypress-io/cypress@1
 workflows:
+  schedule-workflow : 
+    triggers :
+      - schedule :
+          cron : "*/5 * * * *"
   build:
     jobs:
       - cypress/run :
