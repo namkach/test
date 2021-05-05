@@ -3,16 +3,7 @@ orbs:
   cypress: cypress-io/cypress@1
 workflows:
   commit-workflow:
-    build:
-      jobs:
-        - cypress/run :
-            command: npx cypress run --record --key 8480db50-7215-419a-bf3d-ea79ce325abc
-  schedule-workflow:
-    triggers:
-      - schedule:
-          cron: "5 * * * *"
-    build:
-      jobs:
-        - cypress/run :
-            command: npx cypress run --record --key 8480db50-7215-419a-bf3d-ea79ce325abc
-        
+    jobs:
+      - cypress/run :
+          command: npx cypress run --record --key 8480db50-7215-419a-bf3d-ea79ce325abc
+  
