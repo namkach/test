@@ -6,7 +6,7 @@ describe('test', () => {
                 return false
             })
 
-            cy.visit('https://www.pixiv.net/en/')
+            cy.visit('https://integ1.7online.7eleven.co.th/')
             cy.log('text : ' + text)
         })
     })
