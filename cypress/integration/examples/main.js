@@ -1,5 +1,5 @@
 describe('test', () => {
-    var arr = ['qwerty', 'yui']
+    var arr = ['hello', 'world']
     arr.forEach((text) => {
         it('test 1 ' + text, () => { 
             Cypress.on('uncaught:exception', (err, runnable) => {
