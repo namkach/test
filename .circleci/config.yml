@@ -5,4 +5,4 @@ workflows:
   commit-workflow:
     jobs:
       - cypress/run :
-          command: export HTTP_PROXY=http://sunitakac:sysbyp@ss4@sbrproxy01.cpall.co.th:8080 && env && echo $HTTP_PROXY && npx cypress run
+          command: export HTTP_PROXY=http://sunitakac:sysbyp@ss4@sbrproxy01.cpall.co.th:8080  && echo '=============' && env && echo '=============' && echo $HTTP_PROXY && echo '=============' && npx cypress run
