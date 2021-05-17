@@ -5,7 +5,4 @@ workflows:
   commit-workflow:
     jobs:
       - cypress/run :
-          command: npm config set HTTP_PROXY=http://sunitakac:sysbyp@ss4@sbrproxy01.cpall.co.th:8080 && npx cypress run --record --key 8480db50-7215-419a-bf3d-ea79ce325abc
-
-
-          
+          command: npm config delete proxy && npm config set http_proxy=http://sunitakac:sysbyp@ss4@sbrproxy01.cpall.co.th:8080 && npx cypress run --record --key 8480db50-7215-419a-bf3d-ea79ce325abc
