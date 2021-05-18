@@ -5,7 +5,7 @@ describe('test', () => {
             Cypress.on('uncaught:exception', (err, runnable) => {
                 return false
             })
-            
+
             cy.visit('https://integ1.7online.7eleven.co.th/')
             cy.log('text : ' + text)
         })
