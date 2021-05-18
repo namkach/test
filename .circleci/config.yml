@@ -6,10 +6,24 @@ workflows:
   commit-workflow:
     jobs:
       build:
-        executor: win/default
-      steps:
-        - cypress/run :
-          command: npm config rm proxy && npm config rm https-proxy && npm config set proxy http://username:password@proxyname:8080 && npm config set https-proxy http://username:password@proxyname:8080 && npx cypress run
+        executor:
+          name: win/default
+          shell: powershell.exe
+        steps:
+          - cypress/run:
+              name: "run test"
+              shell: powershell.exe
+              command: npm config rm proxy && npm config rm https-proxy && npm config set proxy http://username:password@proxyname:8080 && npm config set https-proxy http://username:password@proxyname:8080 && npx cypress run
+
+
+
+
+    # jobs:
+    #   build:
+    #     executor: win/default
+    #   steps:
+    #     - cypress/run :
+    #       command: npm config rm proxy && npm config rm https-proxy && npm config set proxy http://username:password@proxyname:8080 && npm config set https-proxy http://username:password@proxyname:8080 && npx cypress run
             
             
             
